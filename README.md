@@ -7,6 +7,32 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Photo Search API
+This project host API endpoints for searching photos from various sources.
+
+## Setup Instructions
+
+1. Install Virtual Box and the extension pack: https://www.virtualbox.org/wiki/Downloads - This will be needed for our development environment.	
+2. Install Visual Studio Code - https://code.visualstudio.com/	
+3. Install Visual Studio Code Extensions - PHP Intellisense, PHP IntelePhense, PHP Debug
+4. Install Composer: https://getcomposer.org/download/
+5. Checkout UI repository: git clone <repository name> photosearchui
+6. Checkout API repository: git clone <repository name> photosearchui
+7. Run Composer Install: composer install
+8. Run vagrant up - This step will download a Laravel Homestead Image and setup the VM Image including all the LAMP stack
+9. After your machine is installed and running, run vagrant ssh to go inside the machine.
+10. You may need to add host entries to both API and Frontend APP from local (Mac: /etc/hosts and Windows: c:\windows\system32\drivers\etc\hosts)
+
+## References
+
+- Laravel Homestead: https://laravel.com/docs/8.x/homestead	
+- PHP Tutorial: https://www.w3schools.com/php/DEFAULT.asp	
+- Laravel Tutorial: https://www.tutorialspoint.com/laravel/index.htm	
+- Laravel API Tutorial: https://laravel.com/docs/8.x/passport	
+- HTML5 Tutorial: https://www.w3schools.com/html/	
+- JavaScript Tutorial: https://www.w3schools.com/js/DEFAULT.asp	
+- Bootstrap Library Tutorial: https://www.w3schools.com/bootstrap/bootstrap_get_started.asp
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
