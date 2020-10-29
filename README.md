@@ -10,18 +10,36 @@
 ## Photo Search API
 This project host API endpoints for searching photos from various sources.
 
+## Pre-requisites
+1. Git
+2. PHP 7.3 - Install PHP only if setting up the Vagrant Server.
+3. Composer: https://getcomposer.org/download/
+4. Visual Studio Code - https://code.visualstudio.com/
+5. Visual Studio Code Extensions - PHP Intellisense (optional), PHP IntelePhense, PHP Debug
+
 ## Setup Instructions
 
-1. Install Virtual Box and the extension pack: https://www.virtualbox.org/wiki/Downloads - This will be needed for our development environment.	
-2. Install Visual Studio Code - https://code.visualstudio.com/	
-3. Install Visual Studio Code Extensions - PHP Intellisense, PHP IntelePhense, PHP Debug
-4. Install Composer: https://getcomposer.org/download/
-5. Checkout UI repository: git clone <repository name> photosearchui
-6. Checkout API repository: git clone <repository name> photosearchui
-7. Run Composer Install: composer install
-8. Run vagrant up - This step will download a Laravel Homestead Image and setup the VM Image including all the LAMP stack
-9. After your machine is installed and running, run vagrant ssh to go inside the machine.
-10. You may need to add host entries to both API and Frontend APP from local (Mac: /etc/hosts and Windows: c:\windows\system32\drivers\etc\hosts)
+1. Checkout UI repository: git clone <repository name> photosearchui
+2. Checkout API repository: git clone <repository name> photosearchapi
+3. Switch to dev branch for both repository on local: git checkout dev
+3. Run Composer Install: "composer install" inside PhotoSearchAPI folder
+    - For Vagrant setup, execute "composer install —ignore-platform-reqs"
+4. If you have setup vagrant, then run "vagrant box add laravel/homestead"
+    - If there is any issue with composer SSL cert: run "composer config -g -- disable-tls true"
+5. Run "vagrant up"  - This step will download a Laravel Homestead Image and setup the VM Image including all the LAMP stack
+5. After your machine is installed and running, run "vagrant ssh" to go inside the machine.
+6. You may need to add host entries to both API and Frontend APP from local (Mac: /etc/hosts and Windows: c:\windows\system32\drivers\etc\hosts)
+
+## WAMP Setup
+1.  WAMP Server: https://www.wampserver.com/en/
+        - WAMP stands for Windows, Apache, MySql, & PHP
+
+## Vagrant Setup
+
+1. Install Vagrant: https://www.vagrantup.com/downloads
+2. Vagrant Box and the extension pack: https://www.virtualbox.org/wiki/Downloads 
+        - This will be needed for our development environment.
+3. 
 
 ## References
 
