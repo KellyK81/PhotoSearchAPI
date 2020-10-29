@@ -1,0 +1,25 @@
+ip: 192.168.10.10
+memory: 2048
+cpus: 1
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: ~/Documents/workspace/PhotoSearchAPI
+        to: /home/vagrant/code/PhotoSearchAPI
+    -
+        map: ~/Documents/workspace/PhotoSearchUI
+        to: /home/vagrant/code/PhotoSearchUI
+sites:
+    -
+        map: api.photosearch.com
+        to: /home/vagrant/code/PhotoSearchAPI/
+    -
+        map: dev.photosearch.com
+        to: /home/vagrant/code/PhotoSearchUI/
+databases:
+    - photosearch
+name: photosearch
+hostname: photosearch
