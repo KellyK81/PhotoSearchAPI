@@ -7,6 +7,60 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Photo Search API
+This project host API endpoints for searching photos from various sources.
+
+## Pre-requisites
+1. Git
+2. PHP 7.3 - Install PHP only if setting up the Vagrant Server.
+3. Composer: https://getcomposer.org/download/
+4. Visual Studio Code - https://code.visualstudio.com/
+5. Visual Studio Code Extensions - PHP Intellisense (optional), PHP IntelePhense, PHP Debug
+
+## Setup Instructions
+
+1. Checkout UI repository: git clone <repository name>
+2. Checkout API repository: git clone <repository name>
+3. Switch to dev branch for both repository on local: git checkout dev
+4. Run Composer Install: "composer install" inside PhotoSearchAPI folder
+5. Setup WAMP Server OR Vagrant.
+
+
+## WAMP Setup
+1.  WAMP Server: https://www.wampserver.com/en/
+    Note: WAMP stands for Windows, Apache, MySql, & PHP
+2. Update host entries for both API and Frontend APP from local. 
+    Note: See instructions here: https://john-dugan.com/wamp-vhost-setup/ 
+
+## Vagrant Setup
+
+1. Install Vagrant: https://www.vagrantup.com/downloads
+2. Vagrant Box and the extension pack: https://www.virtualbox.org/wiki/Downloads 
+    Note: This will be needed for our development environment.
+3. Install Homstead box into the system: run "vagrant box add laravel/homestead"
+4. Run "vagrant up"
+    Note: This step will download a Laravel Homestead Image and setup the VM Image including all the LAMP stack
+5. After your machine is installed and running, run "vagrant ssh" to go inside the machine.
+6. Try going to "dev.photosearch.com" or "api.photosearch.com"
+
+## Setup Issues for Vagrant
+
+1. Composer install failed due to SSL Cert error
+   Solution: execute "composer config -g -- disable-tls true"
+2. Composer install failed due to requirement issues:
+   Solution: execute "composer install —ignore-platform-reqs"
+
+
+## References
+
+- Laravel Homestead: https://laravel.com/docs/8.x/homestead	
+- PHP Tutorial: https://www.w3schools.com/php/DEFAULT.asp	
+- Laravel Tutorial: https://www.tutorialspoint.com/laravel/index.htm	
+- Laravel API Tutorial: https://laravel.com/docs/8.x/passport	
+- HTML5 Tutorial: https://www.w3schools.com/html/	
+- JavaScript Tutorial: https://www.w3schools.com/js/DEFAULT.asp	
+- Bootstrap Library Tutorial: https://www.w3schools.com/bootstrap/bootstrap_get_started.asp
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

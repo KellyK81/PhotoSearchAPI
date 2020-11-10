@@ -14,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+/*
+    Direct User:
+        Login -> Client Credential Grant token | None
+        Logout -> Access token
+        Validate Token -> Access token
+        resetPassword -> Access token
+        Create -> Client Token
+    Admin User:
+        Update Information -> Client Token
+*/
+
+Route::group(['middleware' => 'auth:api'], function(){
+    Route::post('/user/validate/token', 'Api\UserController@validateToken')->name('validateToken');
+    Route::post('/user/logout', 'Api\UserController@logout')->name('logout');
 });
