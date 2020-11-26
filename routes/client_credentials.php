@@ -11,4 +11,4 @@ Route::post('/user/resetpassword', 'Api\UserController@resetPassword')->name('us
 /**
  * Setup routes for search operations.
  */
-Route::post('/search', 'Api\SearchController@search')->name('search');
+Route::post('/search/photos', 'Api\SearchController@search')->name('search');

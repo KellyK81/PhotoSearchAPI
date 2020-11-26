@@ -28,4 +28,5 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => 'auth:api'], function(){
     Route::post('/user/validate/token', 'Api\UserController@validateToken')->name('validateToken');
     Route::post('/user/logout', 'Api\UserController@logout')->name('logout');
+    Route::post('/user/search/history', 'Api\SearchController@history')->name('search_history');
 });

@@ -55,6 +55,7 @@ class UserController extends AbstractApiController
             'password' => 'required|string|min:8',
         ]);
         
+        Log::info($request->email);
         if ($validator->fails()) {
             return response(['errors'=>$validator->errors()->all()], Response::HTTP_BAD_REQUEST);
         }
